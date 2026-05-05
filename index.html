@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyril Fernandez - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">CYRIL FERNANDEZ</div>
+            <ul class="nav-links">
+                <li><a href="javascript:loadPage('home.html')">About</a></li>
+                <li><a href="javascript:loadPage('skills.html')">Skills</a></li>
+                <li><a href="javascript:loadPage('portfolio.html')">Portfolio</a></li>
+                <li><a href="javascript:loadPage('education.html')">Education</a></li>
+                <li><a href="javascript:loadPage('contact.html')">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content iFrame - Backbone of the Website -->
+    <iframe id="main-content" src="home.html" style="width: 100%; border: none; display: block; min-height: 80vh;"></iframe>
+
+    <script src="script.js"></script>
+</body>
+</html>
