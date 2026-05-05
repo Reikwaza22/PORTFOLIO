@@ -866,4 +866,10 @@ footer p {
     .project-links {
         flex-direction: column;
     }
+    .profile-img{
+        width: 200px;
+        height: 200px;
+        border-radius: 50px;
+        object-fit: cover;
+    }
 }
