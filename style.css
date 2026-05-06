@@ -181,6 +181,45 @@ body {
     pointer-events: none;
 }
 
+/* Decorative animated circles inside hero */
+.hero-bubbles {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+.hero-bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12) inset;
+    backdrop-filter: blur(4px);
+    transform: translate3d(0,0,0);
+    will-change: transform, opacity;
+    opacity: 0.9;
+}
+.hero-bubble.bubble-1 { width: 160px; height: 160px; left: 5%; top: 10%; animation: bubbleFloat 8s ease-in-out infinite; animation-delay: 0s; }
+.hero-bubble.bubble-2 { width: 100px; height: 100px; left: 80%; top: 20%; animation: bubbleFloat 12s ease-in-out infinite; animation-delay: 2s; }
+.hero-bubble.bubble-3 { width: 220px; height: 220px; left: 60%; top: 60%; animation: bubbleFloat 14s ease-in-out infinite; animation-delay: 4s; }
+.hero-bubble.bubble-4 { width: 90px; height: 90px; left: 30%; top: 70%; animation: bubbleFloat 10s ease-in-out infinite; animation-delay: 1s; }
+.hero-bubble.bubble-5 { width: 130px; height: 130px; left: 45%; top: 15%; animation: bubbleFloat 11s ease-in-out infinite; animation-delay: 3s; }
+.hero-bubble.bubble-6 { width: 70px; height: 70px; left: 15%; top: 50%; animation: bubbleFloat 7s ease-in-out infinite; animation-delay: 5s; }
+.hero-bubble.bubble-7 { width: 50px; height: 50px; left: 85%; top: 70%; animation: bubbleFloat 6s ease-in-out infinite; animation-delay: 6s; }
+.hero-bubble.bubble-8 { width: 140px; height: 140px; left: 25%; top: 30%; animation: bubbleFloat 16s ease-in-out infinite; animation-delay: 8s; }
+
+@keyframes bubbleFloat {
+    0% { transform: translate3d(0,0,0) scale(1); opacity: 0.85; }
+    25% { transform: translate3d(20px,-20px,0) scale(1.03); opacity: 0.95; }
+    50% { transform: translate3d(-25px,-35px,0) scale(1.02); opacity: 0.8; }
+    75% { transform: translate3d(15px,15px,0) scale(1.01); opacity: 0.9; }
+    100% { transform: translate3d(0,0,0) scale(1); opacity: 0.85; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-bubble { animation: none !important; opacity: 0.6; }
+}
+
 .hero-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
