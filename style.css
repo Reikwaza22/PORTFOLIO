@@ -320,6 +320,17 @@ body {
         5px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Profile image used on the about/hero section */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid var(--bg-primary);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    display: block;
+}
+
 .skills-section {
     padding: 5rem 0;
     background-color: var(--bg-secondary);
@@ -867,9 +878,8 @@ footer p {
         flex-direction: column;
     }
     .profile-img{
-        width: 200px;
-        height: 200px;
-        border-radius: 50px;
+        width: 100px;
+        height: 100px;
         object-fit: cover;
     }
 }
