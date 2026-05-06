@@ -1,4 +1,4 @@
-// Function to load pages dynamically into iframe
+
 function loadPage(pageUrl) {
     const iframe = document.getElementById('main-content');
     if (!iframe) {
@@ -8,9 +8,9 @@ function loadPage(pageUrl) {
     iframe.src = pageUrl;
 }
 
-// Initialize page-specific events
+
 function initializePageEvents() {
-    // Handle form submission
+    
     const iframe = document.getElementById('main-content');
     if (!iframe || !iframe.contentDocument) {
         return;
@@ -22,13 +22,13 @@ function initializePageEvents() {
             form.addEventListener('submit', handleContactSubmit);
         }
 
-        // Handle progress bars animation
+        
         const progressBars = iframe.contentDocument.querySelectorAll('.progress-fill');
         if (progressBars.length > 0) {
             animateProgressBars(iframe.contentDocument);
         }
     } catch (e) {
-        // Silently handle - some pages may not have these elements
+        
     }
 }
 
@@ -56,7 +56,7 @@ function handleContactSubmit(event) {
     }
 }
 
-// Animate progress bars
+
 function animateProgressBars(doc = document) {
     const progressBars = doc.querySelectorAll('.progress-fill');
     progressBars.forEach(bar => {
@@ -70,13 +70,13 @@ function animateProgressBars(doc = document) {
 
 // Load home page on initial load
 document.addEventListener('DOMContentLoaded', function() {
-    // Wait a moment for DOM to be fully ready, then load initial page
+    
     setTimeout(() => {
         const iframe = document.getElementById('main-content');
         if (iframe) {
-            // Attach load listener BEFORE setting src
+            
             iframe.addEventListener('load', function() {
-                // Small delay to ensure content is fully loaded
+                
                 setTimeout(() => {
                     initializePageEvents();
                     try {
@@ -84,18 +84,18 @@ document.addEventListener('DOMContentLoaded', function() {
                             this.style.height = (this.contentDocument.body.scrollHeight + 20) + 'px';
                         }
                     } catch (e) {
-                        // Height adjustment may fail with same-origin issues
+                        
                     }
                 }, 100);
             });
             
-            // Now load the initial page
+           
             loadPage('home.html');
         }
     }, 0);
 });
 
-// Smooth scroll for any anchor links (must work within iframe context)
+
 document.addEventListener('click', function(e) {
     if (e.target.tagName === 'A' && e.target.getAttribute('href').startsWith('#')) {
         e.preventDefault();

@@ -84,6 +84,22 @@ body {
     padding: 0 2rem;
 }
 
+.welcome-section {
+    padding: 4rem 0;
+    background-color: var(--bg-primary);
+    text-align: center;
+    border-bottom: 3px solid var(--primary);
+}
+
+.welcome-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Georgia', serif;
+    color: var(--primary);
+}
+
 .navbar {
     background-color: var(--bg-primary);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -772,6 +788,42 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+.map-section {
+    padding: 5rem 0;
+    background-color: var(--bg-secondary);
+    border-top: 5px solid var(--primary);
+    border-bottom: 5px solid var(--primary);
+}
+
+.map-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Georgia', serif;
+    color: var(--primary);
+}
+
+.map-container {
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    border: 3px solid var(--primary);
+    border-radius: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.map-container:hover {
+    box-shadow: 8px 12px 25px rgba(0, 0, 0, 0.3);
+    transform: scale(1.01) translateY(-5px);
+}
+
+.map-container iframe {
+    display: block;
 }
 
 footer {
